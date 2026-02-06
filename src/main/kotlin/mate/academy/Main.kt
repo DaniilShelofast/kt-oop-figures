@@ -21,6 +21,6 @@ fun main() {
     }
 
     for (f in figures) {
-        println(f?.printlnInfo())
+        f?.printlnInfo()
     }
 }

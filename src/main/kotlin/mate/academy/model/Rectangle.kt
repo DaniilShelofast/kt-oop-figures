@@ -1,16 +1,11 @@
 package mate.academy.model
 
-class Rectangle(color: Color, val firstLeg: Double, val secondLeg: Double) : Figure(color) {
+class Rectangle(color: Color, val sideA: Double, val sideB: Double) : Figure(color) {
     override fun printlnInfo() {
         println(
             "Figure: rectangle, area: ${getArea()} sq. units, "
-                    + "firstLeg: $firstLeg units, secondLeg: $secondLeg units, color: $color"
-        )
+                    + "firstLeg: $sideA units, secondLeg: $sideB units, color: $color")
     }
 
-    override fun getArea(): Double = firstLeg.times(secondLeg)
-
-    override fun toString(): String {
-        return "Rectangle(firstLeg=$firstLeg, secondLeg=$secondLeg)"
-    }
+    override fun getArea(): Double = sideA.times(sideB)
 }

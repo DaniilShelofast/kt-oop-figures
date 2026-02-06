@@ -12,8 +12,4 @@ class RightTriangle(color: Color, val firstLeg: Double, val secondLeg: Double) :
 
     override fun getArea(): Double = (firstLeg.times(secondLeg)).div(DIV)
 
-    override fun toString(): String {
-        return "RightTriangle(firstLeg=$firstLeg, secondLeg=$secondLeg)"
-    }
-
 }

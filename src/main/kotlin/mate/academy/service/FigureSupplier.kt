@@ -15,13 +15,14 @@ const val DEFAULT = 10.0
 class FigureSupplier {
     fun getRandomFigure(): Figure {
         val value = (FROM..TO).random().toDouble()
+        val secondValue = (FROM..TO).random().toDouble()
         val color = ColorSupplier().getRandomColor()
         val random = listOf<Figure>(
             Circle(color = color, radius = value),
-            RightTriangle(color = color, firstLeg = value, secondLeg = value),
-            Rectangle(color = color, firstLeg = value, secondLeg = value),
+            RightTriangle(color = color, firstLeg = value, secondLeg = secondValue),
+            Rectangle(color = color, sideA = value, sideB = secondValue),
             Square(color = color, side = value),
-            IsoscelesTrapezoid(color = color, firstLeg = value, secondLeg = value, height = value)
+            IsoscelesTrapezoid(color = color, baseA = value, baseB = secondValue, height = value)
         ).random()
         return random
     }

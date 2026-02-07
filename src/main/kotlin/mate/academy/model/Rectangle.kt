@@ -4,7 +4,7 @@ class Rectangle(color: Color, val sideA: Double, val sideB: Double) : Figure(col
     override fun printlnInfo() {
         println(
             "Figure: rectangle, area: ${getArea()} sq. units, "
-                    + "firstLeg: $sideA units, secondLeg: $sideB units, color: $color")
+                    + "sideA: $sideA units, sideB: $sideB units, color: $color")
     }
 
     override fun getArea(): Double = sideA.times(sideB)

@@ -1,7 +1,10 @@
 package mate.academy.model
 
-abstract class Figure(val color: Color) {
-    abstract fun printlnInfo()
+import mate.academy.service.AreaCalculator
+import mate.academy.service.Drawable
 
-    abstract fun getArea(): Double
+sealed class Figure(val color: Color) : Drawable, AreaCalculator {
+    abstract override fun printlnInfo()
+
+    abstract override fun getArea(): Double
 }

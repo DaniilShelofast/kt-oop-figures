@@ -2,14 +2,14 @@ package mate.academy.model
 
 const val DIV = 2
 
-class RightTriangle(color: Color, val firstLeg: Double, val secondLeg: Double) : Figure(color) {
+class RightTriangle(color: Color, val sideA: Double, val sideB: Double) : Figure(color) {
     override fun printlnInfo() {
         println(
             "Figure: triangle, area: ${getArea()} sq. units, "
-                    + "firstLeg: $firstLeg units, secondLeg: $secondLeg units, color: $color"
+                    + "sideA: $sideA units, sideB: $sideB units, color: $color"
         )
     }
 
-    override fun getArea(): Double = (firstLeg.times(secondLeg)).div(DIV)
+    override fun getArea(): Double = (sideA.times(sideB)).div(DIV)
 
 }

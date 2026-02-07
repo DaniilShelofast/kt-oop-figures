@@ -19,10 +19,10 @@ class FigureSupplier {
         val color = ColorSupplier().getRandomColor()
         val random = listOf<Figure>(
             Circle(color = color, radius = value),
-            RightTriangle(color = color, firstLeg = value, secondLeg = secondValue),
+            RightTriangle(color = color, sideA = value, sideB = secondValue),
             Rectangle(color = color, sideA = value, sideB = secondValue),
             Square(color = color, side = value),
-            IsoscelesTrapezoid(color = color, baseA = value, baseB = secondValue, height = value)
+            IsoscelesTrapezoid(color = color, baseA = value, baseB = secondValue, baseC = value)
         ).random()
         return random
     }
